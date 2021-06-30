@@ -22,14 +22,11 @@ function setup() {
   dog.addImage(sadDog);
   dog.scale=0.15;
   
-  feed=createButton("Feed the dog");
-  feed.position(700,95);
-  feed.mousePressed(feedDog);
+  //create feed and dog button here
 
-  addFood=createButton("Add Food");
-  addFood.position(800,95);
-  addFood.mousePressed(addFoods);
-
+  
+  
+  
 }
 
 function draw() {
@@ -54,14 +51,15 @@ function draw() {
   drawSprites();
 }
 
-//function to read food Stock
+
 function readStock(data){
-  foodS=data.val();
-  foodObj.updateFoodStock(foodS);
+ 
+//function to read food Stock
+  
+  
 }
 
 
-//function to update food stock and last fed time
 function feedDog(){
   dog.addImage(happyDog);
   
@@ -78,10 +76,11 @@ function feedDog(){
   })
 }
 
-//function to add food in stock
 function addFoods(){
-  foodS++;
-  database.ref('/').update({
-    Food:foodS
-  })
+  
+  
+  
+  
+//function to add food in stock
+  
 }
